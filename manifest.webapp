@@ -1,0 +1,11 @@
+{
+  "name": "Telenor üzletek",
+  "description": "Az alkalmazás segít megtalálni a legközelebbi Telenor üzletet.",
+  "launch_path": "/index.html",
+  "icons" : { "128" : "earth.png" },
+  "developer": {
+    "name": "Jani",
+    "url": ""
+  },
+  "default_locale": "hu"
+}
