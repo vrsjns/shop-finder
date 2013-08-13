@@ -2,20 +2,21 @@ var directionsDisplay;
 var directionsService = new google.maps.DirectionsService();
 var map;
 
-var BASE_URL = 'https://maps.googleapis.com/maps/api/distancematrix/json';
+var BASE_DIR = "/shop-finder";
+var BASE_URL = "https://maps.googleapis.com/maps/api/distancematrix/json";
 
 var rendererOptions = {
   draggable: true
 };
 
 var previousLL;
-/*
+
 var xhrList = new XMLHttpRequest();
-xhrList.open('GET', 'shopList.json', false);
+xhrList.open("GET", BASE_DIR + "/json/shopList.json", false);
 xhrList.send();
 var s = JSON.parse(xhrList.responseText);
-*/
 
+/*
 var s = 
 {	"shopList" : [
 { "name" : "Mammut Képviselet", "address" : "1026 Budapest II., Lövőház u. 2-6.", "lat" : "47.5083529", "lon" : "19.0266807"},
@@ -28,7 +29,7 @@ var s =
 { "name" : "Szegedi Bemutatóterem", "address" : "6724 Szeged, Londoni krt. 3.", "lat" : "46.2541386", "lon" : "46.2541386"},
 { "name" : "Telenor Törökbálint", "address" : "2045 Törökbálint, Pannon út 1.", "lat" : "47.435794", "lon" : "18.915538"}
 ]};
-
+*/
 
 
 function toRad(value) {
