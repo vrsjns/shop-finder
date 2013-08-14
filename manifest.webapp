@@ -5,7 +5,7 @@
   "icons" : { "128" : "earth.png" },
   "developer": {
     "name": "Veres János",
-    "url": "veres.org"
+    "url": "http://veres.org"
   },
   "default_locale": "hu"
 }
