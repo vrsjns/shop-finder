@@ -3,6 +3,7 @@ var directionsService = new google.maps.DirectionsService();
 var map;
 
 var BASE_DIR = "/shop-finder";
+var BUDAPEST = new google.maps.LatLng(47.500851,19.053125);
 //var BASE_URL = "https://maps.googleapis.com/maps/api/distancematrix/json";
 
 var rendererOptions = {
@@ -125,6 +126,8 @@ function calcRoute(ll) {
   directionsService.route(request, function(response, status) {
     if (status == google.maps.DirectionsStatus.OK) {
       directionsDisplay.setDirections(response);
+    } else {
+        map.setCenter(BUDAPEST);
     }
   });
     previousLL = ll;
