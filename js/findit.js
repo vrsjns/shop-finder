@@ -3,7 +3,7 @@ var directionsService = new google.maps.DirectionsService();
 var map;
 
 var BASE_DIR = "/shop-finder";
-var BASE_URL = "https://maps.googleapis.com/maps/api/distancematrix/json";
+//var BASE_URL = "https://maps.googleapis.com/maps/api/distancematrix/json";
 
 var rendererOptions = {
   draggable: true
@@ -89,7 +89,6 @@ function calcDistance(lalo){
 	return (new google.maps.LatLng(s.shopList[index].lat, s.shopList[index].lon));
 }
 
-
 function init(options){
 	directionsDisplay = new google.maps.DirectionsRenderer(rendererOptions);
 	previousLL = new google.maps.LatLng(options.coords.latitude,options.coords.longitude);
@@ -128,7 +127,7 @@ function calcRoute(ll) {
       directionsDisplay.setDirections(response);
     }
   });
-	previousLL = ll;
+    previousLL = ll;
 }
 
 function reCalc(result) {
@@ -139,24 +138,19 @@ function reCalc(result) {
 }
 
 function errorCallback(error){
-	//alert('ERROR(' + error.code + '): ' + error.message);
-	//document.write("<h1>Something went wrong. I don't know where are you.</h1>");
+
   switch(error.code)
     {
     case error.PERMISSION_DENIED:
-      //x.innerHTML=
 		console.log("User denied the request for Geolocation.");
       break;
     case error.POSITION_UNAVAILABLE:
-      //x.innerHTML=
 		console.log("Location information is unavailable.");
       break;
     case error.TIMEOUT:
-      //x.innerHTML=
 		console.log("The request to get user location timed out.");
       break;
     case error.UNKNOWN_ERROR:
-      //x.innerHTML=
 		console.log("An unknown error occurred.");
       break;
     }
