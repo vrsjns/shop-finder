@@ -139,19 +139,24 @@ function reCalc(result) {
 
 function errorCallback(error){
 
+  document.write("<h3>Something went wrong. I don't know where are you.</h3>");
   switch(error.code)
     {
     case error.PERMISSION_DENIED:
 		console.log("User denied the request for Geolocation.");
+         document.write("<br /><br /> User denied the request.");
       break;
     case error.POSITION_UNAVAILABLE:
 		console.log("Location information is unavailable.");
+        document.write("<br /><br /> Location information unavaible.");
       break;
     case error.TIMEOUT:
 		console.log("The request to get user location timed out.");
+        document.write("<br /><br /> Request timeout.");
       break;
     case error.UNKNOWN_ERROR:
 		console.log("An unknown error occurred.");
+        document.write("<br /><br /> Unknow error.");
       break;
     }
 }
