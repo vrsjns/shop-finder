@@ -7,5 +7,7 @@
     "name": "Veres János",
     "url": "http://veres.org"
   },
-  "default_locale": "hu"
+  "default_locale": "hu",
+  "chrome": { "navigation": true },
+  "permissions" : { "geolocation" : true }
 }
