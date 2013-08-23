@@ -127,7 +127,7 @@ function calcRoute(ll) {
     if (status == google.maps.DirectionsStatus.OK) {
       directionsDisplay.setDirections(response);
     } else {
-        map.setCenter(BUDAPEST);
+        findIt(BUDAPEST);
     }
   });
     previousLL = ll;
